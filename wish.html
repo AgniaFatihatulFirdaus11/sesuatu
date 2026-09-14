@@ -7,36 +7,68 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ucapan 💌</title>
-    <link rel="stylesheet" href="css/ucapan.css">
+    <title>Wish Umur 15 🌟</title>
+
+    <link rel="stylesheet" href="css/wish.css">
+
 </head>
 
 <body>
-    <div class="container">
-    <audio id="bg-music" src="asset/music/ucapan.mp3" loop></audio>
-    <h1>💌 A Little Message For You</h1>
 
-    <p>
-        Selamat ulang tahun yang ke-15 sayanggg! 🎂
-    </p>
+    <div class="wish-container">
+    <audio id="bg-music" src="asset/music/wish.mp3" loop></audio>
+        <h1>🌟 My 15th Wish 🌟</h1>
 
-    <p>
-        Semoga di umur yang baru ini,
-        kamu mendapatkan banyak hal baik,
-        kamu menemukan banyak alasan untuk tersenyum,
-        kamuu bisa mencapai apa yang kamu usahakan,
-        dan terus menjadi versi terbaik dari dirimu sendiri.
-        Maafin akuu yaa karena akuu belumm bisaa ngasihh apa-apa di ulang tahun kamu,
-        aku cuman bisa ngasih kamu sebisa aku, contoh nya web ini.
-        Makasihh yaaa sayanggg kamuuu sudaa mauu nemeninn akuu ngeberesinn web iniiii, 
-        akuu jugaa mauu mintaa maaff karenaaa inii web nyaa masihh jelekk hehe.
-        Lopyuuuu sayanggggggg💖.
-    </p>
+        <p>
+            Sekarang tuliskan harapan dan keinginanmu
+            di umur 15 tahun 💖
+        </p>
 
-    <a href="menu.php" class="btn">
-        ← Kembali
-    </a>
-    
+        <form action="simpan_wish.php" method="POST">
+
+            <label>
+                Apa harapanmu di umur 15?
+            </label>
+
+            <textarea
+                name="harapan"
+                placeholder="Tuliskan harapanmu..."
+                required
+            ></textarea>
+
+
+            <label>
+                Apa yang ingin kamu capai?
+            </label>
+
+            <textarea
+                name="keinginan"
+                placeholder="Tuliskan keinginanmu..."
+                required
+            ></textarea>
+
+
+            <label>
+                Pesan untuk dirimu di masa depan
+            </label>
+
+            <textarea
+                name="pesan"
+                placeholder="Tuliskan pesan untuk dirimu..."
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                💌 Simpan Wish
+            </button>
+
+        </form>
+
+        <a href="menu.html">
+            ← Kembali ke Menu
+        </a>
+
     </div>
     <canvas id="particles"></canvas>
 
@@ -62,7 +94,7 @@
         }, { once: true });
     });
 
-        const canvas = document.getElementById('particles');
+    const canvas = document.getElementById('particles');
         const ctx = canvas.getContext('2d');
 
         function resize() {
