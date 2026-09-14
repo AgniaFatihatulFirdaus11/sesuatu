@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #ffeaf3;
+   
+}
+
+.container {
+    text-align: center;
+}
+
+.container-galeri {
+    gap: 10px;
+}
+
+.grid-galeri {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.grid-galeri img {
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.grid-galeri img:hover {
+    transform: scale(1.05)
+}
+
+.kolom {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.box {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #f4b3cf;
+    background-color: #f4b3cf;
+    border-radius: 15px;
+}
+
+.box:hover {
+    transform: scale(1.05)
+}
+
+.box h2 {
+    color: #4a1030;      /* dark plum/maroon gelap - kontras tegas dari pink */
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    display: block;
+}
+
+.a-galeri {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    color: white;
+    text-decoration: none;
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+.memories {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: #ff6fa5;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+    animation: tombolMasuk 1.5s ease 0.9s both;
+}
+
+@keyframes tombolMasuk {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn:hover {
+    transform: scale(0.5);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .kolom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    .kolom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .box h2 {
+        font-size: 14px;
+    }
+}
+
+/* HP kecil banget */
+@media (max-width: 380px) {
+    .kolom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+}

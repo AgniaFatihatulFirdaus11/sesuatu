@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu 💖</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+   
+    <div class="container">
+        <audio id="bg-music" src="asset/music/menu.mp3" loop></audio>
+        <h1>✨ Mau buka yang mana dulu? ✨</h1>
+
+        <p>Pilih salah satu yaa 💖</p>
+        <audio id="musikGaleri" loop>
+        <source src="asset/music/abadi.mp3" type="audio/mpeg" >
+    </audio>
+        <div class="menu">
+            <div class="kolom kiri">
+                <a href="ucapan.php" class="menu-item">
+                    💌
+                    <span>Ucapan</span>
+                </a>
+                <a href="galeri.php" class="menu-item">
+                    📸
+                    <span>Galeri</span>
+                </a>
+            </div>
+
+            <div class="kolom kanan">
+                <a href="wish.php" class="menu-item">
+                    🌟
+                    <span>Wish Umur 15</span>
+                </a>
+                <a href="lagu.php" class="menu-item">
+                    🎁
+                    <span>Music</span>
+                </a>
+                
+            </div>
+            
+        
+        </div>
+               
+    </div>
+    <div class="hearts">
+        <span>💗</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>💓</span>
+        <span>💗</span>
+        <span>💖</span>
+    </div>
+    <script>
+        const music = document.getElementById('bg-music');
+    
+    // coba autoplay
+    music.play().catch(() => {
+        // kalau diblokir browser, baru play saat halaman disentuh
+        document.addEventListener('click', () => {
+            music.play();
+        }, { once: true });
+    });
+    </script>
+</body>
+</html>

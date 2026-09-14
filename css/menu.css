@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffeaf3;
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+}
+
+.container h1 {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+
+.container > p {
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+.menu {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px; 
+align-items: center;
+
+width: 100%;
+margin: 30px auto;
+}
+
+.kolom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* jarak antar tombol ke bawah */
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: #ff6fa5;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;    
+    transition: 0.3s;
+    animation: menuMasuk 0.8s ease both,
+                denyut 2s ease-in-out infinite;
+}
+
+.menu-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.menu-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.menu-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.menu-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes menuMasuk {
+
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes denyut {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}   
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+.hearts span {
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    animation: naik 8s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 75%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(6) {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+@keyframes naik {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+.lagu {
+    grid-column: 1 / 3;
+    width: 100%;
+    justify-self: center;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .kolom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    .kolom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .box h2 {
+        font-size: 14px;
+    }
+}
+
+/* HP kecil banget */
+@media (max-width: 380px) {
+    .kolom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+}

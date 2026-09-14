@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagu</title>
+    <link rel="stylesheet" href="css/lagu.css
+    ">
+</head>
+<body>
+    <h2 class="judul-utama">Ini adalah Beberapa Lagu yang selalu mengingatkan ku padamu..</h2>
+
+    <div class="container">
+
+    <div class="lagu">
+    <div class="box">
+        <img src="asset/images/kelas1.jpg" alt="" >
+        <br>
+        <audio src="asset/music/kelas1.mp3" type="audio/mpeg" controls></audio>
+        <h2>Jendela Kelas Satu - Iwan Fals</h2>
+        <p>Lagu ini mengingatkan ku pada kamu ketika kita berada di kelas 7.</p>
+    </div>
+
+    <div class="box">
+        <img src="asset/images/abadi.jpg" alt=""><br>
+        <audio src="asset/music/abadi.mp3" type="audio/mpeg" controls></audio>
+        <h2>Ini Abadi - Perunggu</h2>
+        <p>Lagu ini aku gambarkan sebagai cinta kita yang akan selalu abadi.</p>
+    </div>
+
+    <div class="box">
+        <img src="asset/images/sajedewe.jpg" alt="">
+        <br>
+        <audio src="asset/music/sajedewe.mp3" type="audio/mpeg" controls></audio>
+        <h2>Cinta di Pantai Bali - Sajedewe</h2>
+        <p>Entah mengapa lagu ini sering membuatku ingat kepadamu, mungkin karena bait lagu nya.</p>
+    </div>
+
+    <div class="box">
+        <img src="asset/images/didekatmu.jpg" alt=""><br>
+        <audio src="asset/music/didekatmu.mp3" type="audio/mpeg" controls></audio>
+        <h2>Didekatmu - CrazyRasta</h2>
+        <p>Kalo lagu ini mengingatkan ku ketika aku sedang berada di dekatmu, entah itu di chat, video call, atau sedang 
+            berada di samping mu.
+        </p>
+    </div>
+
+    <div class="box">
+        <img src="asset/images/tertanam.jpg" alt=""><br>
+        <audio src="asset/music/tertanam.mp3" type="audio/mpeg" controls></audio>
+        <h2>Tertanam - Tony Q Rastafara</h2>
+        <p>Seperti bait di lagu nya "ada yang tertanam, tinggal di halaman hatii".
+            Entah mengapa di bait itu aku selalu teringat kepadamu, mungkin karena kamu tidak pernah pergi dari hati aku.
+        </p>
+    </div>
+
+    <div class="box">
+        <img src="asset/images/momonon.jpg" alt=""><br>
+        <audio src="asset/music/momonon.mp3" type="audio/mpeg" controls></audio>
+        <h2>Canda Tawamu - Momonon</h2>
+        <p>Lagu ini mengingatkan ku kpda mu dengan canda dan tawa.</p>
+    </div>
+    </div>
+    
+</div><br><br>
+
+<a href="menu.php" class="btn">Back</a>
+
+</body>
+</html>

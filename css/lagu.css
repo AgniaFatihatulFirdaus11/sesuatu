@@ -1,0 +1,148 @@
+body {
+    background: #ffeaf3;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.judul-utama {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 15px;
+    color: #7a1f4d;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.lagu {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.box {
+    background: #f4b3cf;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+
+}
+
+.box img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.box audio {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.box h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.box p {
+    font-size: 13px;
+    flex-grow: 1;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: #ff6fa5;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+    animation: tombolMasuk 1.5s ease 0.9s both,
+                denyut 2s ease-in-out 2.5s infinite;
+}
+
+@keyframes tombolMasuk {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes denyut {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .lagu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .judul-utama {
+        font-size: 20px;
+    }
+}
+
+/* HP */
+@media (max-width: 700px) {
+    .lagu {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .box h2 {
+        font-size: 14px;
+    }
+
+    .box p {
+        font-size: 12px;
+    }
+
+    .judul-utama {
+        font-size: 18px;
+        padding: 15px 10px;
+    }
+}
+
+/* HP kecil banget */
+@media (max-width: 400px) {
+    .lagu {
+        grid-template-columns: 1fr;
+    }
+
+    .judul-utama {
+        font-size: 16px;
+    }
+}
